@@ -1,0 +1,42 @@
+/*--------------------------------*\
+* LAYOUT 
+
+*Container............overall layout of the page
+*
+*Main.................over layout of the content
+*
+\*--------------------------------*/
+
+
+/*--------------------------------*\
+* OVERALL LAYOUT OF THE PAGE
+\*--------------------------------*/
+
+.container {
+    display:        flex;
+    flex-flow:      column nowrap;
+    min-height:     100vh;
+    width:          100%;
+    position:       relative;
+}
+  
+  
+  
+  
+  
+  /*--------------------------------*\
+  * CONTENT LAYOUT
+  \*--------------------------------*/
+
+  main {
+    display:         flex;
+    flex-flow:       column nowrap;      
+    justify-content: flex-start;
+    align-items:     center;
+    flex-grow:       1;
+    width:           100%;
+    margin-top:      var(--header-height);
+    
+  }
+
+ 

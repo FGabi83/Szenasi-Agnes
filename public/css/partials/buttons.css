@@ -1,0 +1,103 @@
+.btn {
+      
+    display:        inline-block;
+    width:          90%;
+    border:         0.125rem solid;
+    opacity:        1;
+    padding:        .5rem;
+    font-size:      var(--font-size-small);
+    line-height:    var(--line-height-small);
+    text-align:     center;
+    text-transform: uppercase;
+    align-self:     center;
+  }
+  
+  .btn:hover {
+    transition:       0.3s;
+  }
+  
+    .btn__primary {
+      background:   var(--brand-color) 0% 0% no-repeat padding-box;
+      border-color: var(--brand-color);
+      color:        var(--secondary-color);
+    }
+
+    .btn__primary:hover {
+      background:   transparent;
+      border-color: var(--brand-color);
+      color:        var(--brand-color);
+    }
+
+    .btn__hollow {
+      background:   transparent;
+      border-color: var(--brand-color);
+      color:        var(--brand-color);
+    }
+
+    .btn__hollow:hover {
+      background:   var(--brand-color);
+      border-color: var(--brand-color);
+      
+    }
+
+    .btn__hero {
+      background:   var(--brand-color) 0% 0% no-repeat padding-box;
+      border-color: var(--brand-color);
+      color:        var(--secondary-color);
+    }
+
+    .btn__hero:hover {
+      background:   transparent;
+      border-color: var(--secondary-color);
+      color:        var(--secondary-color);
+    }
+
+    .btn__hero__hollow {
+      background:   transparent;
+      border-color: var(--secondary-color);
+      color:        var(--secondary-color);
+    }
+
+    .btn__hero__hollow:hover {
+      background:   var(--brand-color) 0% 0% no-repeat padding-box;
+      border-color: var(--brand-color);
+      
+    }
+
+    .buttons--wrapper {
+      display:         flex;
+      flex-flow:       column nowrap;
+      justify-content: space-between;
+      width:           100%;
+      gap:             1.4rem;
+    }
+
+    /*
+Extra kicsi (XS): Kevesebb, mint 576px széles készülékek. Ezek az extra kicsi készülékek, 
+például mobiltelefonok vagy kis táblagépek.
+Kicsi (SM): Legalább 576px széles készülékek. Ezek a kis készülékek, például 
+kis méretű táblagépek vagy nagyobb mobiltelefonok.
+Közepes (MD): Legalább 768px széles készülékek. Ezek közepes méretű készülékek, 
+mint például táblagépek vagy nagyobb mobiltelefonokat elforgatva.
+Nagy (LG): Legalább 992px széles készülékek. Ezek a nagyobb asztali kijelzők vagy 
+nagyobb táblagépek.
+Extra nagy (XL): Legalább 1200px széles készülékek. Ezek az extra nagy kijelzők, 
+például nagy asztali monitorok.
+*/
+
+    /* On tablet and mobile there is no hover effect */
+
+    /*@media (max-width: 923px) {
+      .btn__primary:hover {
+        background:   var(--brand-color) 0% 0% no-repeat padding-box;
+        border-color: var(--brand-color);
+        color:        var(--secondary-color);
+      } 
+      .btn__hollow:hover {
+        background:   transparent;
+        border-color: var(--secondary-color);
+        color:        var(--secondary-color); 
+      }
+    }
+  */
+    

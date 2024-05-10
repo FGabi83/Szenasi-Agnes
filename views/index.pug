@@ -1,0 +1,19 @@
+extends layout 
+
+include mixins/_head
+
+block head 
+  meta(name="description" content="Szénási Ágnes - SEO text here")
+  title Szénási Ágnes | Kezdőlap
+  +head 
+block content
+  main
+    .hero--main
+      .hero-text--wrapper
+        h1.title.title__hero Pszichológiai tanácsadás és Autogén tréning
+        p.text__hero Budapesten személyesen vagy online
+      .buttons--wrapper
+        a.btn.btn__hero(href="/kapcsolat.html") Kérj Időpontot
+        a.btn.btn__hero__hollow(href="/kapcsolat.html#konzultacio") Ingyenes Konzultáció
+      
+    
