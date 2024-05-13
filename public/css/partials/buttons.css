@@ -1,7 +1,7 @@
 .btn {
       
     display:        inline-block;
-    width:          90%;
+    width:          clamp(11.6436rem, 90%, 16.25rem);
     border:         0.125rem solid;
     opacity:        1;
     padding:        .5rem;
@@ -84,6 +84,21 @@ nagyobb táblagépek.
 Extra nagy (XL): Legalább 1200px széles készülékek. Ezek az extra nagy kijelzők, 
 például nagy asztali monitorok.
 */
+@media (min-width: 568px) {
+  .buttons--wrapper {
+    flex-flow:       row nowrap;
+    justify-content: center;
+    gap:             1rem;
+  }
+}
+@media (min-width: 992px) {
+  .buttons--wrapper {
+    justify-content: flex-start;
+    gap:             1.4rem;
+  }
+}
+
+
 
     /* On tablet and mobile there is no hover effect */
 
