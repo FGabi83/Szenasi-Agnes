@@ -367,14 +367,14 @@
     --background-color:     #F4F3F5; /* light grey*/
     --tertiary-color:       #FEEECA; /* light yellow */
     --tertiary-color-rgb:   254, 238, 202;
-    --font-size-regular:    clamp(1rem, .5vw + .9rem, 1.25rem);
+    --font-size-regular:    clamp(1rem, .9vw + .8rem, 1.25rem);
     --line-height-regular:  clamp(1.5rem, 1.9vw + 1rem, 1.875rem);
     --font-size-big:        calc(var(--font-size-regular) * 1.8);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
     --font-size-small:      0.875rem;
     --line-height-small:    1rem;
     --header-height:        5rem;
-    --hero-height:          calc(100vh - var(--header-height));  
+    --hero-height:          calc(100dvh - var(--header-height));  
     --footer-height:        7.5rem; 
 } 
 
@@ -472,6 +472,7 @@ html {
       font-size:      var(--font-size-small);
       line-height:    var(--line-height-small);
       color:          var(--secondary-color);
+      font-weight:    500;
     }
 
     .text__brand {
@@ -578,12 +579,13 @@ html {
 .btn {
       
     display:        inline-block;
-    width:          clamp(11.6436rem, 90%, 16.25rem);
+    width:          clamp(11.6436rem, 90%, 15rem);
     border:         0.125rem solid;
     opacity:        1;
     padding:        .5rem;
     font-size:      var(--font-size-small);
     line-height:    var(--line-height-small);
+    font-weight:    500;
     text-align:     center;
     text-transform: uppercase;
     align-self:     center;
@@ -625,7 +627,6 @@ html {
 
     .btn__hero:hover {
       background:   transparent;
-      border-color: var(--secondary-color);
       color:        var(--secondary-color);
     }
 
@@ -675,9 +676,7 @@ például nagy asztali monitorok.
     gap:             1.4rem;
     width:           60%;
   }
-  .btn__hero__hollow {
-    color:           var(--brand-color);
-  }
+  
 }
 
 
@@ -726,125 +725,44 @@ header {
   padding-right:    10%;
   position:         fixed;
   z-index:          100; 
-  
+ 
   
 }
 
   
   /* Navbar */
-
+ 
   .js-nav--wrapper {
-    display: flex;
+  display: flex;
+  width:   100%;
+  position: fixed;
+  top:     var(--header-height);
+  left:    0;
+}
+
+  .js-nav--wrapper > * {
+    width: 100%;
   }
-
-  .nav {
-    width:           100%;
-    display:         flex;
-    flex-flow:       row nowrap;
-    justify-content: space-evenly;
-    align-items:     center;
-    gap:             1rem;
-    margin-left:     3rem;
-    
-  }
-  
-    .js-nav--item, .js-nav--item__logo {
-      position:        relative; /* to position the underline */
-      display:         inline-block; 
+    .nav {
+      max-height:       0;
+      display:          flex;
+      width:            100%;
+      gap:              0;
+      margin-left:      0; /*desktop version has 3rem margin-left*/
+      flex-flow:        column nowrap;
+      justify-content:  flex-start;
+      align-items:      center;
+      background-color: var(--brand-color);
+      overflow:         hidden;
+      transition:       max-height 0.5s ease-out;
     }
-  
-    /*in case of hover, underline is shown at the bottom of the navbar*/
-  
-      .js-nav--item:hover::after {
-        content:          "";
-        display:          block;
-        width:            100%;
-        height:           0.25rem;
-        background-color: var(--secondary-color);
-        position:         absolute;
-        bottom:           -1rem;
-        left:             0;
-        
-      }
-    
-  
-      .js-nav--item:hover, .js-nav--menu:hover {
-        font-weight:      bold;
-        transition:       0.3s;
-      }
-
-      .js-nav--item__logo:hover::after {
-        content:          "";
-        display:          block;
-        width:            100%;
-        height:           0.25rem;
-        background-color: var(--secondary-color);
-        position:         absolute;
-        bottom:           -.05rem;
-        left:             0;
-        
-      
-      }
-
-    /*Active link is highlighted*/
-  
-      .js-nav--item__active {
-        font-weight:     bold;
-      }
-  
-
-  /*Sandvich menu is not shown on desktop */
-  
-  
-  .js-nav--menu {
-    display:         none;
-    color:           var(--secondary-color);
-    
-       
-  }
-
-/*--------------------------------*\
-  * MOBILE LAYOUT
-\*--------------------------------*/
-
-/*Sandvich menu*/
-/* 
-* 1) light yellow line separating the menu items 
-* 2) hover effect on mobile version not needed
-*/
-
-    @media (max-width: 991px) {
-    .js-nav--wrapper {
-      display: flex;
-      width:   100%;
-      position: fixed;
-      top:     var(--header-height);
-      left:    0;
-    }
-
-    .js-nav--wrapper > * {
-      width: 100%;
-    }
-      .nav {
-        max-height:       0;
-        display:          flex;
-        width:            100%;
-        gap:              0;
-        margin-left:      0; /*desktop version has 3rem margin-left*/
-        flex-flow:        column nowrap;
-        justify-content:  flex-start;
-        align-items:      center;
-        background-color: var(--brand-color);
-        overflow:         hidden;
-        transition:       max-height 0.5s ease-out;
-      }
     
       .js-nav--wrapper.js-is-open .nav {
         max-height: 100%;
       }
     
         .nav > * { 
-          border-bottom:   1px solid rgba(var(--tertiary-color-rgb), 0.65); /*[1]*/
+          border-bottom:   1px solid rgba(var(--secondary-color-rgb), 0.65); /*[1]*/
           padding-top:     1px;
           width:           100%;
           height:          2rem;
@@ -867,7 +785,7 @@ header {
       
     .js-nav--menu {
       display:          block;
-      
+      color:        var(--secondary-color);
     }
     
     
@@ -875,8 +793,92 @@ header {
       .js-nav--menu.js-highlight {
         opacity:          1;
       }
+    
+    /*DESKTOP LAYOUT*/
+    
+    @media (min-width: 992px) {
+      .js-nav--wrapper {
+        display: flex;
+        width:   70%;
+        position: unset;
+      }
+  
+      .js-nav--wrapper > * {
+        width: 100%;
+      }  
+    .nav {
+      width:           100%;
+      display:         flex;
+      max-height:      100%;
+      flex-flow:       row nowrap;
+      justify-content: space-between;
+      align-items:     center;
+      gap:             .5rem;
     }
 
+      .nav > * {
+        border-bottom: none;
+      }
+    
+      .js-nav--item, .js-nav--item__logo {
+        position:        relative; /* to position the underline */
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+        padding:         0;
+        height:          var(--header-height);
+      }
+    
+      /*in case of hover, underline is shown at the bottom of the navbar*/
+    
+        .js-nav--item:hover::after {
+          content:          "";
+          display:          block;
+          width:            100%;
+          height:           0.25rem;
+          background-color: var(--secondary-color);
+          position:         absolute;
+          bottom:           0;
+          left:             0;
+          z-index:          1000;
+        }
+      
+    
+        .js-nav--item:hover, .js-nav--menu:hover {
+          
+          transition:       0.3s;
+        }
+  
+        .js-nav--item__logo:hover::after {
+          content:          "";
+          display:          block;
+          width:            100%;
+          height:           0.25rem;
+          background-color: var(--secondary-color);
+          position:         absolute;
+          bottom:           0;
+          left:             0;
+          
+        
+        }
+  
+      /*Active link is highlighted*/
+    
+        .js-nav--item__active {
+          font-weight:     bold;
+        }
+    
+  
+    /*Sandvich menu is not shown on desktop */
+    
+    
+    .js-nav--menu {
+      display:         none;
+      color:           var(--secondary-color);
+      
+         
+    }
+  }
     @media (min-width: 1400px) {
       header {
         padding-left:  20%;
@@ -904,7 +906,7 @@ HERO SECTION
 /* Hero background and color */
 
 .hero--main {
-  background:  url('/images/photos/Mobile_woman-relaxing.jpg') no-repeat center / cover;
+  background:  url('/images/photos/test-Mobile_woman-relaxing.jpg') no-repeat center / cover;
   background-blend-mode: multiply;
   /*background-color:   rgba(var(--brand-color-rgb), .3);*/
   min-height:         var(--hero-height);
@@ -915,7 +917,7 @@ HERO SECTION
   justify-content:    space-between;
   align-items:        center;
   color:              var(--secondary-color);
-  padding:            2.5rem 1rem calc(var(--line-height-small) + 1.5rem) 1rem;
+  padding:            6.6vh 1rem calc(var(--line-height-small) + 1rem) 1rem;
 } 
 
 .hero-text--wrapper {
@@ -929,12 +931,17 @@ HERO SECTION
 }
 
   .text__hero {
-    width:         90%;
+    /*width:         90%;*/
   }
 
 /*Hero background and layout for bigger screens*/
-
 @media (min-width: 768px) {
+  .title__hero {
+    font-size:   calc(var(--font-size-regular) * 2);
+    line-height: calc(var(--line-height-regular) * 1.5);
+  }
+}
+@media (min-width: 986px) {
   .hero--main {
     background:  url('/images/photos/Desktop_woman-relaxing.jpg') no-repeat center / cover;
     justify-content: flex-start;

@@ -1,12 +1,13 @@
 .btn {
       
     display:        inline-block;
-    width:          clamp(11.6436rem, 90%, 16.25rem);
+    width:          clamp(11.6436rem, 90%, 15rem);
     border:         0.125rem solid;
     opacity:        1;
     padding:        .5rem;
     font-size:      var(--font-size-small);
     line-height:    var(--line-height-small);
+    font-weight:    500;
     text-align:     center;
     text-transform: uppercase;
     align-self:     center;
@@ -48,7 +49,6 @@
 
     .btn__hero:hover {
       background:   transparent;
-      border-color: var(--secondary-color);
       color:        var(--secondary-color);
     }
 
@@ -98,9 +98,7 @@ például nagy asztali monitorok.
     gap:             1.4rem;
     width:           60%;
   }
-  .btn__hero__hollow {
-    color:           var(--brand-color);
-  }
+  
 }
 
 
