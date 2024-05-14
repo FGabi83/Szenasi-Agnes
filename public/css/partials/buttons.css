@@ -54,7 +54,7 @@
 
     .btn__hero__hollow {
       background:   transparent;
-      border-color: var(--secondary-color);
+      border-color: var(--brand-color);
       color:        var(--secondary-color);
     }
 
@@ -70,6 +70,7 @@
       justify-content: space-between;
       width:           100%;
       gap:             1.4rem;
+    
     }
 
     /*
@@ -91,12 +92,17 @@ például nagy asztali monitorok.
     gap:             1rem;
   }
 }
-@media (min-width: 992px) {
-  .buttons--wrapper {
+@media (min-width: 768px) {
+  .buttons__hero--wrapper {
     justify-content: flex-start;
     gap:             1.4rem;
+    width:           60%;
+  }
+  .btn__hero__hollow {
+    color:           var(--brand-color);
   }
 }
+
 
 
 

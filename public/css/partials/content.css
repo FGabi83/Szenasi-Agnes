@@ -1,0 +1,105 @@
+.article {
+  display:         flex;
+  flex-flow:       column nowrap;
+  justify-content: flex-start;
+  align-items:     center;
+  width:           100%;
+} 
+
+.article__last {
+  margin-bottom: 2rem;
+}
+
+.article--img {
+  width:         100%;
+  aspect-ratio:  '1/1' ; 
+  object-fit:    cover;
+  margin-bottom: 1rem;
+}
+
+.article--content {
+  display:         flex;
+  flex-flow:       column nowrap;
+  justify-content: flex-start;
+  align-items:     center;
+  width:           100%;
+  gap:             1.5rem;
+  
+}
+
+  .align-left {
+    align-self: flex-start;
+  }
+
+  
+
+  .article--list li {
+    list-style-position: inside;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .article--list {
+    padding-left: 0;
+  }
+  
+  
+  
+  .article--list li:before {
+    content: "•"; /* Bullet point ikon */
+    margin-right: 0.5rem; /* A bullet point távolsága a szövegtől */
+    font-size: 1.5rem;
+  }
+  
+
+/*--------------------------------*/
+/* TABLET AND DESKTOP */
+/*--------------------------------*/
+
+@media (min-width: 768px) {
+  .article--content {
+    width: 70%;
+  }
+  .article--img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:    auto;
+    grid-template-areas:
+      "img title"
+      "img content";
+    column-gap: 1.5rem;
+    row-gap:    0;
+    margin-top: 2rem;
+    border: 1px solid green;
+  }
+  .article--title {
+    grid-area: title; 
+    align-self: end;
+    margin-top: 0; 
+    border: 1px solid red;
+  }
+  .article--img {
+    grid-area: img; 
+    align-self: stretch; 
+    margin-bottom: 0;
+    border: 1px solid orange;
+  }
+  .article--content {
+    grid-area: content;
+    align-self: start; 
+    width: 100%; 
+    border: 1px solid blue
+  }
+  
+  .article__middle {
+    grid-template-areas:
+    "title img"
+    "content img";
+  }
+}
