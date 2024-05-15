@@ -14,6 +14,7 @@
     --tertiary-color-rgb:   254, 238, 202;
     --font-size-regular:    clamp(1rem, .9vw + .8rem, 1.25rem);
     --line-height-regular:  clamp(1.5rem, 1.9vw + 1rem, 1.875rem);
+    --hero-title:           clamp(1.25rem, 2.5641vw + 0.673rem, 3.75rem);
     --font-size-big:        calc(var(--font-size-regular) * 1.8);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
     --font-size-small:      0.875rem;
@@ -70,13 +71,15 @@ html {
       font-family:   'Montserrat', sans-serif;
       font-weight:    bold;
       font-size:      calc(var(--font-size-regular) * 1.5);
-      line-height:    calc(var(--line-height-regular) * 1);
+      line-height:    calc(var(--line-height-regular) * 1.5);
       margin:         0;
       margin-bottom:  .5rem;
     }
      
       
       .title__hero {
+        font-size:      var(--hero-title);
+        line-height:    calc(var(--hero-title) * 1.5);
         font-weight:    600;
         text-align:     center;
       }
@@ -86,8 +89,6 @@ html {
 
     .title__center {
       text-align: center;
-      margin-top:    1rem;
-      margin-bottom: 1rem;
     }
 
     
@@ -140,7 +141,14 @@ html {
         }
       }   
 
-  
+@media (min-width: 1920px) {
+  .text__nav {
+    font-size:     1rem;
+  }
+  .text__hero {
+    font-size:     1.5rem;
+  }
+} 
    
 
   

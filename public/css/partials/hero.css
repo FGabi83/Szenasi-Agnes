@@ -44,10 +44,13 @@ HERO SECTION
   }
 
 /*Hero background and layout for bigger screens*/
-@media (min-width: 768px) {
+@media (max-height: 539px) {
+  .hero--main {
+    padding-top: .6rem;
+    padding-top: 1.97938vh;
+  }
   .title__hero {
-    font-size:   calc(var(--font-size-regular) * 2);
-    line-height: calc(var(--line-height-regular) * 1.5);
+    line-height: calc(var(--hero-title) * 1.2);
   }
 }
 @media (min-width: 986px) {
@@ -66,17 +69,12 @@ HERO SECTION
   .title__hero, .text__hero {
     text-align: left;
   }
-  .title__hero {
-    font-size: calc(var(--font-size-regular) * 1.875);
-    line-height: calc(var(--line-height-regular) * 1.5);
-  }
- 
 }
 
 @media (min-width: 1400px) {
-  .hero--main {
+  /*.hero--main {
     padding: 10% 0 0 20%;
-  }
+  }*/
 }
    /*
 Extra kicsi (XS): Kevesebb, mint 576px széles készülékek. Ezek az extra kicsi készülékek, 

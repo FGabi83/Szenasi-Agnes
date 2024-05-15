@@ -39,7 +39,7 @@
     
   }
 
-  section {
+  .section {
     display:         flex;
     flex-flow:       column nowrap;
     justify-content: flex-start;
@@ -50,16 +50,18 @@
   }
 
   @media (min-width: 400px) {
-    section {
+    .section {
       padding-left: 5%;
       padding-right: 5%;
     }
   }
 
   @media (min-width: 768px) {
-    section {
-      padding-left: 10%;
+    .section {
+      padding-left:  10%;
       padding-right: 10%;
+      gap:           3rem;
+      padding-top:   3rem;
     }
   }
 

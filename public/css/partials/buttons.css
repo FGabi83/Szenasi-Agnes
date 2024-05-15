@@ -98,7 +98,12 @@ például nagy asztali monitorok.
     gap:             1.4rem;
     width:           60%;
   }
-  
+}
+
+@media (min-width: 1920px) {
+  .btn {
+    font-size: 1rem;
+  }
 }
 
 

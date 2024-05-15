@@ -1,3 +1,10 @@
+
+
+/*--------------------------------*/
+/* MOBILE LAYOUT FOR THE MAIN PAGE */
+/*--------------------------------*/
+
+
 .article {
   display:         flex;
   flex-flow:       column nowrap;
@@ -8,6 +15,11 @@
 
 .article__last {
   margin-bottom: 5vw;
+}
+
+.article--title {
+  margin-top:    1rem;
+  margin-bottom: 1rem;
 }
 
 .article--img {
@@ -22,7 +34,7 @@
   flex-flow:       column nowrap;
   justify-content: flex-start;
   align-items:     center;
-  width:         min(26.879875rem, 100%);
+  width:           min(26.879875rem, 100%);
   gap:             1.5rem;
   
 }
@@ -35,8 +47,8 @@
 
   .article--list li {
     list-style-position: inside;
-    display: flex;
-    align-items: flex-start;
+    display:             flex;
+    align-items:         flex-start;
   }
 
   .article--list {
@@ -46,43 +58,106 @@
   
   
   .article--list li:before {
-    content: "•"; /* Bullet point ikon */
+    content:      "•"; /* Bullet point ikon */
     margin-right: 0.5rem; /* A bullet point távolsága a szövegtől */
-    font-size: 1.5rem;
+    font-size:    1.5rem;
   }
+
+  /*--------------------------------*/
+  /*MOBILE LAYOUT FOR THE SUBPAGES*/
+  /*--------------------------------*/
+
+  .img-background {
+    width:           100%;
+    max-height:      50vh;
+    display:        flex;
+    justify-content: center;
+    align-items:     center;
+    margin-bottom:   0;
+    /*background-color: rgba(var(--brand-color-rgb), 0.1);*/
+  }
+  .img__fullwidth {
+    width:           min(120rem, 100%);
+    max-height:      50vh;
+    object-fit:      cover;
+    object-position: top;
+    margin-bottom:   0;
+  }
+    .crop-top {
+      object-position: bottom;
+    }
+
+    
+  .article--wrapper {
+    gap:             1rem;
+    width:           min(120rem, 100%);
+    background-color: var(--secondary-color);
+    
+  }
+
+    .article__detailed {
+      display:         flex;
+      flex-flow:       column nowrap;
+      justify-content: flex-start;
+      align-items:     center;
+      width:           min(45rem,100%);
+      gap:             1rem;
+      margin-top:      2rem;
+      margin-bottom:   2rem;
+    }
+ 
+     
+    .article__detailed--content {
+      display:         flex;
+      flex-flow:       column nowrap;
+      justify-content: flex-start;
+      align-items:     center;
+      width:           100%;
+      gap:             1rem;
+      margin-bottom:   2rem;
+      
+    }
+
   
 
+
+
 /*--------------------------------*/
-/* TABLET AND DESKTOP */
+/* TABLET AND DESKTOP FOR MAIN PAGE */
 /*--------------------------------*/
+@media (min-width: 400px) {
+  .article--title {
+    margin-bottom: 1.5rem;
+  }
+}
 
 @media (min-width: 992px) {
   .article {
-    display: grid;
+    display:               grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:    auto;
     grid-template-areas:
       "img title"
       "img content";
-    column-gap: 1.5rem;
-    row-gap:    0;
-    margin-top: 5vw;
+    column-gap:            1.5rem;
+    row-gap:               0;
+    margin-top:            5vw;
   }
   .article--title {
-    grid-area: title; 
+    grid-area:  title; 
     align-self: end;
     margin-top: 0; 
     text-align: left;
   }
   .article--img {
-    grid-area: img; 
-    align-self: stretch;
-    justify-self: center; 
+    grid-area:     img; 
+    align-self:    stretch;
+    justify-self:  center; 
     margin-bottom: 0;
   }
   .article--content {
-    grid-area: content;
-    align-self: start;
+    grid-area:    content;
+    align-self:   start;
     justify-self: center; 
   }
   .article__middle {
@@ -92,6 +167,28 @@
   }
 }
 
+
+
+
+/*--------------------------------*/
+/* TABLET AND DESKTOP FOR SUBPAGES */
+/*--------------------------------*/
+
+
+@media (min-width: 768px) {
+ .article__detailed--title {
+  margin-bottom: 1rem;
+  }
+  .article__detailed--content {
+    gap:           1.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+
+
+
+
 @media (min-width: 1500px) {
   /*.article {
     box-sizing: content-box;
@@ -99,7 +196,7 @@
     box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.2);
   }*/
   body {
-    background-color: rgba(var(--brand-color-rgb), 0.1);
+   background-color: rgba(var(--brand-color-rgb), 0.1);
   }
   .article {
     background: var(--secondary-color);
