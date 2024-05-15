@@ -182,17 +182,12 @@ header {
          
     }
   }
-    @media (min-width: 1400px) {
-      /*header {
-        padding-left:  20%;
-        padding-right: 20%;
-      }*/
-    }
+    
 
-    @media (min-width: 2390px) {
-      header {
-        padding-left:  15%;
-        padding-right: 15%;
-      }
-    }
+@media (min-width: 2390px) {
+  header {
+    padding-left:  15%;
+    padding-right: 15%;
+  }
+}
     
