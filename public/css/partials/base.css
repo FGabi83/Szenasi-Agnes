@@ -7,7 +7,7 @@
     --primary-color-rgb:    1, 18, 23;
     --secondary-color:      #FFFFFF; /* white */
     --secondary-color-rgb:  255, 255, 255;
-    --brand-color:          #2D7890; 
+    --brand-color:          #397285; 
     --brand-color-rgb:      45, 120, 144;
     --background-color:     #F4F3F5; /* light grey*/
     --tertiary-color:       #FEEECA; /* light yellow */
@@ -90,6 +90,8 @@ html {
     .title__center {
       text-align: center;
     }
+
+    
 
     
 /*Text*/

@@ -8,16 +8,10 @@ HERO SECTION
 */
 
 
-
-
-
-
 /* Hero background and color */
 
 .hero--main {
   background:  url('/images/photos/test-Mobile_woman-relaxing.jpg') no-repeat center / cover;
-  background-blend-mode: multiply;
-  /*background-color:   rgba(var(--brand-color-rgb), .3);*/
   min-height:         var(--hero-height);
   width:              100%;
   
@@ -39,11 +33,10 @@ HERO SECTION
 
 }
 
-  .text__hero {
-    /*width:         90%;*/
-  }
+  
 
 /*Hero background and layout for bigger screens*/
+
 @media (max-height: 539px) {
   .hero--main {
     padding-top: .6rem;
@@ -70,21 +63,3 @@ HERO SECTION
     text-align: left;
   }
 }
-
-@media (min-width: 1400px) {
-  /*.hero--main {
-    padding: 10% 0 0 20%;
-  }*/
-}
-   /*
-Extra kicsi (XS): Kevesebb, mint 576px széles készülékek. Ezek az extra kicsi készülékek, 
-például mobiltelefonok vagy kis táblagépek.
-Kicsi (SM): Legalább 576px széles készülékek. Ezek a kis készülékek, például 
-kis méretű táblagépek vagy nagyobb mobiltelefonok.
-Közepes (MD): Legalább 768px széles készülékek. Ezek közepes méretű készülékek, 
-mint például táblagépek vagy nagyobb mobiltelefonokat elforgatva.
-Nagy (LG): Legalább 992px széles készülékek. Ezek a nagyobb asztali kijelzők vagy 
-nagyobb táblagépek.
-Extra nagy (XL): Legalább 1200px széles készülékek. Ezek az extra nagy kijelzők, 
-például nagy asztali monitorok.
-*/

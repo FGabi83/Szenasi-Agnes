@@ -1,92 +1,101 @@
-.content-card {
-    width:           100%;
-    min-height:      calc(100vh - var(--header-height) - var(--footer-height));
-    background:      var(--secondary-color) 0% 0% no-repeat padding-box;
-    display:         grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows:    repeat(2, 1fr);
-    grid-template-areas: 
-      "map contact-wrapper"
-       "map open-wrapper";
-    padding:        5rem;
-    gap:            2rem;
-    
-  }
-
-  .map {grid-area: map;}
-  .contact--wrapper {grid-area: contact-wrapper;}
-  .open--wrapper {grid-area: open-wrapper;}
-
-  .map {
-    width:           min(100%, 563px);
-    height:          80%;
-    border-radius:   2px;
-    object-fit:      cover;
-    border:          1px solid var(--background-color);
-    justify-self:    flex-end;
-    
-  }
-
+.contacts--wrapper {
+  gap:             2.5rem;
+  padding:         3rem 2rem 3rem 2rem;
  
+  
+}
 
-    .contact--wrapper, .open--wrapper {
-      display:         flex;
-      flex-flow:       column nowrap;
-      justify-content: flex-start;
-      gap:             .5rem;
-      
+  .article__contacts {
+    display:         flex;
+    flex-flow:       column nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    gap:             1rem;
+    width:           min(18.416rem,100%);
+  }
+
+    .article__contacts--title {
+      margin-bottom: 0;
     }
 
-    
+    .contact--link {
+      color:           var(--primary-color);
+      text-decoration: none;
+      display:         block;
+      line-height:     1.5rem;
+    }
+
+      .contact--icon {
+        padding-right: .5rem;
+        color:         var(--primary-color);
+     
+      }
+
+    .icon-text--wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start; 
+      align-items: baseline;
+      gap:          .5rem; 
+    }
+
+      .contact--map {
+        width:        100%;
+        aspect-ratio: 1/1;
+        border:       none;
+      }
 
 
-      /* Phone and email */
+      .free-consult, .prices {
+        text-align: center;
+      }
 
-        .phone, .email {
-          display:        block;
-          text-transform: none;
-          margin-bottom:  .25rem;
+      .prices {
+        margin-bottom: 1.5rem;
+      }
 
-        }
+/*********************************/
+/*TABLET AND DESKTOP LAYOUT */
+/*********************************/
 
-        
-  
-        .phone:hover, .email:hover {
-          text-decoration: underline;
-        }
-
-  
-
-
-      
- @media (max-width: 923px) {
-  .content-card {
-    grid-template-areas: 
-      "contact-wrapper"  
-      "map"
-      "open-wrapper";
-    grid-template-columns: 1fr;
-    grid-template-rows:    auto;
-    justify-items:         center;
-    padding:               2rem 5% 2rem 5%;
-    
+@media (min-width: 768px) {
+  .contacts--wrapper {
+    flex-flow:       row nowrap;
+    justify-content: center;
+    align-items:     flex-start;
+    padding-left:    10%;
+    padding-right:   10%;
+    gap:             10%;   
   }
-
-  .contact--wrapper {
-    padding-top:  2rem;
+  .article__contacts {
+    box-sizing: content-box;
+    height: 50%;
   }
-  
-  .map {
-    width:        clamp(286px, 80%, 358px);
-    aspect-ratio: 1/1;
-    place-self:   center;
+ 
+  .free-consult, .prices {
+    text-align: left;
+  }
+.prices {
+  margin-bottom: 2rem;
+}
+
+
+}
+
+
+@media (min-width: 1500px) {
+  .contacts--wrapper {
+    gap: 5%;
+  }
+  .article__contacts {
+    padding: 2rem 3rem 2rem 3rem;
+    background-color: var(--secondary-color);
   }
 }
 
-@media (max-width: 323px) {
-  .content-card {
-    padding: 2rem 5px 2rem 5px;
-    overflow-x: scroll;
+@media (min-width: 1500px) and (min-height: 960px) {
+  .article__contacts {
+    height:  50vh;
+    margin: auto 0 auto 0;
   }
-  
 }

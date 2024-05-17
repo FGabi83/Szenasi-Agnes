@@ -362,7 +362,7 @@
     --primary-color-rgb:    1, 18, 23;
     --secondary-color:      #FFFFFF; /* white */
     --secondary-color-rgb:  255, 255, 255;
-    --brand-color:          #2D7890; 
+    --brand-color:          #397285; 
     --brand-color-rgb:      45, 120, 144;
     --background-color:     #F4F3F5; /* light grey*/
     --tertiary-color:       #FEEECA; /* light yellow */
@@ -445,6 +445,8 @@ html {
     .title__center {
       text-align: center;
     }
+
+    
 
     
 /*Text*/
@@ -910,6 +912,110 @@ header {
   }
 }
     
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/contacts.css ***!
+  \****************************************************************************************************************/
+.contacts--wrapper {
+  gap:             2.5rem;
+  padding:         3rem 2rem 3rem 2rem;
+ 
+  
+}
+
+  .article__contacts {
+    display:         flex;
+    flex-flow:       column nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    gap:             1rem;
+    width:           min(18.416rem,100%);
+  }
+
+    .article__contacts--title {
+      margin-bottom: 0;
+    }
+
+    .contact--link {
+      color:           var(--primary-color);
+      text-decoration: none;
+      display:         block;
+      line-height:     1.5rem;
+    }
+
+      .contact--icon {
+        padding-right: .5rem;
+        color:         var(--primary-color);
+     
+      }
+
+    .icon-text--wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start; 
+      align-items: baseline;
+      gap:          .5rem; 
+    }
+
+      .contact--map {
+        width:        100%;
+        aspect-ratio: 1/1;
+        border:       none;
+      }
+
+
+      .free-consult, .prices {
+        text-align: center;
+      }
+
+      .prices {
+        margin-bottom: 1.5rem;
+      }
+
+/*********************************/
+/*TABLET AND DESKTOP LAYOUT */
+/*********************************/
+
+@media (min-width: 768px) {
+  .contacts--wrapper {
+    flex-flow:       row nowrap;
+    justify-content: center;
+    align-items:     flex-start;
+    padding-left:    10%;
+    padding-right:   10%;
+    gap:             10%;   
+  }
+  .article__contacts {
+    box-sizing: content-box;
+    height: 50%;
+  }
+ 
+  .free-consult, .prices {
+    text-align: left;
+  }
+.prices {
+  margin-bottom: 2rem;
+}
+
+
+}
+
+
+@media (min-width: 1500px) {
+  .contacts--wrapper {
+    gap: 5%;
+  }
+  .article__contacts {
+    padding: 2rem 3rem 2rem 3rem;
+    background-color: var(--secondary-color);
+  }
+}
+
+@media (min-width: 1500px) and (min-height: 960px) {
+  .article__contacts {
+    height:  50vh;
+    margin: auto 0 auto 0;
+  }
+}
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hero.css ***!
   \************************************************************************************************************/
@@ -923,16 +1029,10 @@ HERO SECTION
 */
 
 
-
-
-
-
 /* Hero background and color */
 
 .hero--main {
   background:  url('/images/photos/test-Mobile_woman-relaxing.jpg') no-repeat center / cover;
-  background-blend-mode: multiply;
-  /*background-color:   rgba(var(--brand-color-rgb), .3);*/
   min-height:         var(--hero-height);
   width:              100%;
   
@@ -954,11 +1054,10 @@ HERO SECTION
 
 }
 
-  .text__hero {
-    /*width:         90%;*/
-  }
+  
 
 /*Hero background and layout for bigger screens*/
+
 @media (max-height: 539px) {
   .hero--main {
     padding-top: .6rem;
@@ -986,23 +1085,6 @@ HERO SECTION
   }
 }
 
-@media (min-width: 1400px) {
-  /*.hero--main {
-    padding: 10% 0 0 20%;
-  }*/
-}
-   /*
-Extra kicsi (XS): Kevesebb, mint 576px széles készülékek. Ezek az extra kicsi készülékek, 
-például mobiltelefonok vagy kis táblagépek.
-Kicsi (SM): Legalább 576px széles készülékek. Ezek a kis készülékek, például 
-kis méretű táblagépek vagy nagyobb mobiltelefonok.
-Közepes (MD): Legalább 768px széles készülékek. Ezek közepes méretű készülékek, 
-mint például táblagépek vagy nagyobb mobiltelefonokat elforgatva.
-Nagy (LG): Legalább 992px széles készülékek. Ezek a nagyobb asztali kijelzők vagy 
-nagyobb táblagépek.
-Extra nagy (XL): Legalább 1200px széles készülékek. Ezek az extra nagy kijelzők, 
-például nagy asztali monitorok.
-*/
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/content.css ***!
   \***************************************************************************************************************/
@@ -1032,7 +1114,6 @@ például nagy asztali monitorok.
 
 .article--img {
   width:         min(26.879875rem, 100%);
-  aspect-ratio:  '1/1' ; 
   object-fit:    cover;
   margin-bottom: 1rem;
 }
@@ -1047,9 +1128,9 @@ például nagy asztali monitorok.
   
 }
 
-  .align-left {
-    align-self: flex-start;
-  }
+.align-left {
+  align-self: flex-start;
+}
 
   
 
@@ -1057,6 +1138,7 @@ például nagy asztali monitorok.
     list-style-position: inside;
     display:             flex;
     align-items:         flex-start;
+    
   }
 
   .article--list {
@@ -1070,6 +1152,11 @@ például nagy asztali monitorok.
     margin-right: 0.5rem; /* A bullet point távolsága a szövegtől */
     font-size:    1.5rem;
   }
+
+
+
+
+
 
   /*--------------------------------*/
   /*MOBILE LAYOUT FOR THE SUBPAGES*/
@@ -1123,7 +1210,11 @@ például nagy asztali monitorok.
       width:           100%;
       gap:             1rem;
       margin-bottom:   2rem;
-      
+     
+    }
+
+   #mikor-fordulj-hozzam { 
+      scroll-margin-top: calc(var(--header-height) + 1rem); 
     }
 
   
@@ -1133,6 +1224,7 @@ például nagy asztali monitorok.
 /*--------------------------------*/
 /* TABLET AND DESKTOP FOR MAIN PAGE */
 /*--------------------------------*/
+
 @media (min-width: 400px) {
   .article--title {
     margin-bottom: 1.5rem;
@@ -1310,8 +1402,7 @@ footer {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./public/css/style.css ***!
   \**************************************************************************************************************************************************************************/
 /*@import 'partials/highlighted-text.css';*/
-/*@import 'partials/contacts.css';
-@import 'partials/drinks.css';*/
+/*@import 'partials/drinks.css';*/
 /*@import 'partials/accordion.css';
 @import 'partials/privacy.css';
 @import 'partials/impressium.css';*/
