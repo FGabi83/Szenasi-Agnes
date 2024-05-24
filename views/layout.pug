@@ -15,7 +15,7 @@ html(lang="hu")
             div
               nav.nav
                 block nav
-                  -const menu = [{ slug: '/tanacsadas.html', title: 'Pszichológiai tanácsadás', }, { slug: '/autogen.html', title: 'Autogén tréning', }, { slug: '/rolam.html', title: 'Hogyan segíthetek', }, { slug: '/kapcsolat.html', title: 'Kapcsolat | Ár', },]
+                  -const menu = [{ slug: '/tanacsadas', title: 'Pszichológiai tanácsadás', }, { slug: '/autogen', title: 'Autogén tréning', }, { slug: '/rolam', title: 'Hogyan segíthetek', }, { slug: '/kapcsolat', title: 'Kapcsolat | Ár', },]
                   each item, index in menu
                     a.js-nav--item.text__nav(href=item.slug, class=(index === menu.length - 1) ? 'nav--item__last' : '') #{item.title}
           .js-nav--menu 
@@ -28,11 +28,11 @@ html(lang="hu")
         .icons--wrapper
           a(href="mailto:agi.szenasi321@gmail.com")
             i.icons.icons__light.fa-regular.fa-envelope
-          a(href="tel:1234567890")
+          a(href="tel:+36302857034")
             i.icons.icons__light.fa-solid.fa-phone
         .links--wrapper
-          a.footer--text__link.text__small(href="/adatvedelem.html") Adatvédelmi Tájékoztató
-          a.footer--text__link.text__small(href="/impresszium.html") Impresszum
+          a.footer--text__link.text__small(href="/adatvedelem") Adatvédelmi Tájékoztató
+          a.footer--text__link.text__small(href="/impresszium") Impresszum
         p.footer--text.text__small © 2024 Copyright Szénási Ágnes
 
 

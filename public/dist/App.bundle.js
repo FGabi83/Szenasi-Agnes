@@ -2,33 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./public/javascripts/modules/accordion.js":
-/*!*************************************************!*\
-  !*** ./public/javascripts/modules/accordion.js ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-function accordion() {
-  var button = document.querySelector('.js-accordion--btn');
-  var content = document.querySelector('.js-accordion--content');
-  function toggleText() {
-    if (button.textContent === 'Tovább') {
-      button.textContent = 'Vissza';
-    } else {
-      button.textContent = 'Tovább';
-    }
-  }
-  button.addEventListener('click', function () {
-    content.classList.toggle('js-active');
-    toggleText();
-  });
-}
-;
-/* harmony default export */ __webpack_exports__["default"] = (accordion);
-
-/***/ }),
-
 /***/ "./public/javascripts/modules/activeNavItem.js":
 /*!*****************************************************!*\
   !*** ./public/javascripts/modules/activeNavItem.js ***!
@@ -139,15 +112,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ "./public/css/style.css");
 /* harmony import */ var _modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dropdownMenu */ "./public/javascripts/modules/dropdownMenu.js");
 /* harmony import */ var _modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/activeNavItem */ "./public/javascripts/modules/activeNavItem.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
  // without this import webpack doesn't generate the css file
-
 
 
 
 (0,_modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_3__["default"])();
 }();
 /******/ })()
 ;

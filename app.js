@@ -14,27 +14,27 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
-app.get('/tanacsadas.html', (req, res) => {
+app.get('/tanacsadas', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'tanacsadas.html'));
 });
 
-app.get('/autogen.html', (req, res) => {
+app.get('/autogen', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'autogen.html'));
 });
 
-app.get('/rolam.html', (req, res) => {
+app.get('/rolam', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist',  'rolam.html'));
 });
 
-app.get('/kapcsolat.html', (req, res) => {
+app.get('/kapcsolat', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist',  'kapcsolat.html'));
 });
 
-app.get('/adatvedelem.html', (req, res) => {
+app.get('/adatvedelem', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'adatvedelem.html'));
 });
 
-app.get('/impresszium.html', (req, res) => {
+app.get('/impresszium', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'impresszium.html'));
 });
 

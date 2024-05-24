@@ -199,18 +199,13 @@
 
 
 
-@media (min-width: 1500px) {
-  /*.article {
-    box-sizing: content-box;
-    padding:    5%;
-    box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.2);
-  }*/
+@media (min-width: 1440px) {
+  
   body {
    background-color: rgba(var(--brand-color-rgb), 0.1);
   }
-  .article {
-    background: var(--secondary-color);
-    box-sizing: content-box;
-    padding: 5%;
+  .section {
+    background-color: var(--secondary-color);
   }
+  
 }

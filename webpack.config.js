@@ -92,30 +92,37 @@ const config = {
     new HtmlWebpackPlugin({
       template: "./views/index.pug",
       filename: "index.html", 
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       template: "./views/tanacsadas.pug",
-      filename: "tanacsadas.html", 
+      filename: "tanacsadas.html",
+      inject: false, 
     }),
     new HtmlWebpackPlugin({
       template: "./views/autogen.pug",
       filename: "autogen.html", 
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       template: "./views/rolam.pug",
       filename: "rolam.html", 
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       template: "./views/kapcsolat.pug",
-      filename: "kapcsolat.html", 
+      filename: "kapcsolat.html",
+      inject: false, 
     }),
     new HtmlWebpackPlugin({
       template: "./views/adatvedelem.pug",
       filename: "adatvedelem.html", 
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       template: "./views/impresszium.pug",
       filename: "impresszium.html", 
+      inject: false,
     }),
   ],
 };
