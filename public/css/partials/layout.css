@@ -46,7 +46,6 @@
     flex-flow:       column nowrap;
     justify-content: flex-start;
     align-items:     center;
-    width:           100%;
     gap:             2rem;
     padding:         1rem;
   }
@@ -67,7 +66,16 @@
     }
   }
 
- 
+  @media (min-width: 1440px) {
+  
+    body {
+     background-color: rgba(var(--brand-color-rgb), 0.1);
+    }
+    .section {
+      background-color: var(--secondary-color);
+    }
+    
+  }
   
 
  

@@ -374,7 +374,7 @@
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
     --font-size-small:      0.875rem;
     --line-height-small:    1rem;
-    --header-height:        5rem;
+    --header-height:        clamp(3.5rem, 5vw + 2rem, 6rem);
     --hero-height:          calc(100dvh - var(--header-height));  
     --footer-height:        7.5rem; 
 } 
@@ -562,7 +562,6 @@ html {
     flex-flow:       column nowrap;
     justify-content: flex-start;
     align-items:     center;
-    width:           100%;
     gap:             2rem;
     padding:         1rem;
   }
@@ -583,7 +582,16 @@ html {
     }
   }
 
- 
+  @media (min-width: 1440px) {
+  
+    body {
+     background-color: rgba(var(--brand-color-rgb), 0.1);
+    }
+    .section {
+      background-color: var(--secondary-color);
+    }
+    
+  }
   
 
  
@@ -1163,13 +1171,13 @@ HERO SECTION
   
   
   .article--list li:before {
-    content:      "•"; /* Bullet point ikon */
+    content:      "•"; 
     margin-right: 0.5rem; /* A bullet point távolsága a szövegtől */
     font-size:    1.5rem;
   }
 
 
-
+ 
 
 
 
@@ -1180,11 +1188,11 @@ HERO SECTION
   .img-background {
     width:           100%;
     max-height:      50vh;
-    display:        flex;
+    display:         flex;
     justify-content: center;
     align-items:     center;
     margin-bottom:   0;
-    /*background-color: rgba(var(--brand-color-rgb), 0.1);*/
+    
   }
   .img__fullwidth {
     width:           min(120rem, 100%);
@@ -1199,8 +1207,8 @@ HERO SECTION
 
     
   .article--wrapper {
-    gap:             1rem;
-    width:           min(120rem, 100%);
+    gap:              1rem;
+    width:            min(120rem, 100%);
     background-color: var(--secondary-color);
     
   }
@@ -1304,16 +1312,7 @@ HERO SECTION
 
 
 
-@media (min-width: 1440px) {
-  
-  body {
-   background-color: rgba(var(--brand-color-rgb), 0.1);
-  }
-  .section {
-    background-color: var(--secondary-color);
-  }
-  
-}
+
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/footer.css ***!
   \**************************************************************************************************************/
