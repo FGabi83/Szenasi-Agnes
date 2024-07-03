@@ -31,9 +31,8 @@
      
       }
 
-    .icon-text--wrapper {
+    .icon-link--wrapper {
       display: flex;
-      flex-flow: row nowrap;
       justify-content: flex-start; 
       align-items: baseline;
       gap:          .5rem; 

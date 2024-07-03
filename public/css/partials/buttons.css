@@ -1,7 +1,7 @@
 .btn {
       
     display:        inline-block;
-    width:          clamp(11.6436rem, 90%, 15rem);
+    width:          clamp(11.9248rem, 90%, 15rem);
     border:         0.125rem solid;
     opacity:        1;
     padding:        .5rem;
@@ -73,18 +73,7 @@
     
     }
 
-    /*
-Extra kicsi (XS): Kevesebb, mint 576px széles készülékek. Ezek az extra kicsi készülékek, 
-például mobiltelefonok vagy kis táblagépek.
-Kicsi (SM): Legalább 576px széles készülékek. Ezek a kis készülékek, például 
-kis méretű táblagépek vagy nagyobb mobiltelefonok.
-Közepes (MD): Legalább 768px széles készülékek. Ezek közepes méretű készülékek, 
-mint például táblagépek vagy nagyobb mobiltelefonokat elforgatva.
-Nagy (LG): Legalább 992px széles készülékek. Ezek a nagyobb asztali kijelzők vagy 
-nagyobb táblagépek.
-Extra nagy (XL): Legalább 1200px széles készülékek. Ezek az extra nagy kijelzők, 
-például nagy asztali monitorok.
-*/
+ 
 @media (min-width: 568px) {
   .buttons--wrapper {
     flex-flow:       row nowrap;

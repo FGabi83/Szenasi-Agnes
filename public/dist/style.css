@@ -498,7 +498,7 @@ html {
         }
       }   
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .text__nav {
     font-size:     1rem;
   }
@@ -601,7 +601,7 @@ html {
 .btn {
       
     display:        inline-block;
-    width:          clamp(11.6436rem, 90%, 15rem);
+    width:          clamp(11.9248rem, 90%, 15rem);
     border:         0.125rem solid;
     opacity:        1;
     padding:        .5rem;
@@ -673,18 +673,7 @@ html {
     
     }
 
-    /*
-Extra kicsi (XS): Kevesebb, mint 576px széles készülékek. Ezek az extra kicsi készülékek, 
-például mobiltelefonok vagy kis táblagépek.
-Kicsi (SM): Legalább 576px széles készülékek. Ezek a kis készülékek, például 
-kis méretű táblagépek vagy nagyobb mobiltelefonok.
-Közepes (MD): Legalább 768px széles készülékek. Ezek közepes méretű készülékek, 
-mint például táblagépek vagy nagyobb mobiltelefonokat elforgatva.
-Nagy (LG): Legalább 992px széles készülékek. Ezek a nagyobb asztali kijelzők vagy 
-nagyobb táblagépek.
-Extra nagy (XL): Legalább 1200px széles készülékek. Ezek az extra nagy kijelzők, 
-például nagy asztali monitorok.
-*/
+ 
 @media (min-width: 568px) {
   .buttons--wrapper {
     flex-flow:       row nowrap;
@@ -964,9 +953,8 @@ header {
      
       }
 
-    .icon-text--wrapper {
+    .icon-link--wrapper {
       display: flex;
-      flex-flow: row nowrap;
       justify-content: flex-start; 
       align-items: baseline;
       gap:          .5rem; 
@@ -1055,7 +1043,7 @@ HERO SECTION
 /* Hero background and color */
 
 .hero--main {
-  background:  url('/images/photos/test-Mobile_woman-relaxing.jpg') no-repeat center / cover;
+  background:  url('/images/photos/Mobile_woman-relaxing.jpg') no-repeat center / cover;
   min-height:         var(--hero-height);
   width:              100%;
   
@@ -1064,14 +1052,14 @@ HERO SECTION
   justify-content:    space-between;
   align-items:        center;
   color:              var(--secondary-color);
-  padding:            6.6vh 1rem calc(var(--line-height-small) + 1rem) 1rem;
+  padding:            10vh 1rem calc(var(--line-height-small) + 1rem) 1rem;
 } 
 
 .hero-text--wrapper {
   display:         flex;
   flex-flow:       column nowrap;
   justify-content: center;
-  align-items:     center;
+  align-items:     center; 
   width:           100%;
  
 
@@ -1083,11 +1071,15 @@ HERO SECTION
 
 @media (max-height: 539px) {
   .hero--main {
-    padding-top: .6rem;
-    padding-top: 1.97938vh;
+    padding-top: 6vh;
   }
   .title__hero {
     line-height: calc(var(--hero-title) * 1.2);
+  }
+}
+@media (min-width:768px) {
+  .hero--main {
+    padding-top: 7vh;
   }
 }
 @media (min-width: 986px) {
@@ -1195,7 +1187,7 @@ HERO SECTION
     
   }
   .img__fullwidth {
-    width:           min(120rem, 100%);
+    width:           100%;
     max-height:      50vh;
     object-fit:      cover;
     object-position: top;
@@ -1208,7 +1200,7 @@ HERO SECTION
     
   .article--wrapper {
     gap:              1rem;
-    width:            min(120rem, 100%);
+    width:            100%;
     background-color: var(--secondary-color);
     
   }
@@ -1268,7 +1260,7 @@ HERO SECTION
   }
   .article--title {
     grid-area:  title; 
-    align-self: end;
+    align-self: flex-end;
     margin-top: 0; 
     text-align: left;
   }
@@ -1287,6 +1279,9 @@ HERO SECTION
     grid-template-areas:
     "title img"
     "content img";
+  }
+  .article--content > .btn {
+    align-self: flex-start;
   }
 }
 
@@ -1361,10 +1356,8 @@ footer {
 /* Social media icons */
 
 .icons--wrapper {
-    /*width:           50%;*/
     height:          2rem;
     display:         flex;
-    flex-flow:       row nowrap;
     justify-content: flex-start;
     gap:             .625rem;
 

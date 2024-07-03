@@ -1,10 +1,8 @@
 /* Social media icons */
 
 .icons--wrapper {
-    /*width:           50%;*/
     height:          2rem;
     display:         flex;
-    flex-flow:       row nowrap;
     justify-content: flex-start;
     gap:             .625rem;
 
