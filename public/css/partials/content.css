@@ -11,6 +11,7 @@
   justify-content: flex-start;
   align-items:     center;
   width:           min(55.1015625rem, 100%);
+  width:           min(58rem, 100%);
 } 
 
 .article__last {
@@ -91,7 +92,9 @@
     .crop-top {
       object-position: bottom;
     }
-
+    .crop-center {
+      object-position: 50% 85%;
+    }
     
   .article--wrapper {
     gap:              1rem;
@@ -177,6 +180,12 @@
   }
   .article--content > .btn {
     align-self: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article {
+    column-gap:    4rem;
   }
 }
 

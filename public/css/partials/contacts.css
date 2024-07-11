@@ -25,6 +25,8 @@
       line-height:     1.5rem;
     }
 
+    
+
       .contact--icon {
         padding-right: .5rem;
         color:         var(--primary-color);
@@ -84,10 +86,12 @@
  padding-left: 1.9rem;
   
 }
-
-
 }
-
+@media (min-width: 1024px) {
+  .contact--link:hover {
+    text-decoration: underline;
+  }
+}
 
 @media (min-width: 1500px) {
   .contacts--wrapper {

@@ -24,11 +24,13 @@ footer {
       text-align:      center;
       letter-spacing:  0.15rem;
       text-transform:  uppercase;
-      color:           var(--tertiary-color);
+      color:           var(--brand-color);
     }
 
     .footer--text__link {
-      color:           var(--brand-color);
+      color:           var(--secondary-color);
+      opacity:         .8;
+      
     }
 
     .footer--text__link:hover {

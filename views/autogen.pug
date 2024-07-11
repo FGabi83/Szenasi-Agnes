@@ -1,11 +1,14 @@
 extends layout 
 
 include mixins/_head
+include mixins/_head-end
 
 block head 
   meta(name="description" content="Fedezd fel az autogén tréning jótékony hatásait velem. Relaxációs technikák a stressz csökkentésére.")
   title Szénási Ágnes | Autogén tréning
   +head 
+  link(rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-meditating.jpg" type="image/jpeg")
+  +headEnd
 block content
   main
     .img-background

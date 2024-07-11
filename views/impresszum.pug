@@ -1,0 +1,44 @@
+extends layout
+
+include mixins/_head
+include mixins/_head-end
+
+block head 
+  title Szénási Ágnes | Impresszum
+  +head
+  +headEnd
+
+block content 
+  main.section
+    .impressum--wrapper
+      h1.title.title__center.impressum-title Impresszum
+      .impressum--subwrapper
+        h2.subtitle.text__brand Vállalkozás adatai
+        p
+          span.text__bold Cégnév:</span> Szénási Ágnes EV.
+        p
+          span.text__bold Székhely:</span> 1031 Budapest, Amfiteátrum utca 23.
+        p
+          span.text__bold Levelezési cím:</span> 1031 Budapest, Amfiteátrum utca 23.
+        p
+          span.text__bold Adószám:</span> 57203209-1-41
+        p
+          span.text__bold Nyilvántartási száma:</span> 55803463
+        p
+          span.text__bold Kamara:</span> Budapesti Kereskedelmi és Iparkamara
+        p
+          span.text__bold Telefonszám:</span> +36 70 123 4567
+        p
+          span.text__bold E-mail:</span> agi.szenasi321@gmail.com
+      .impressum--subwrapper      
+        h2.subtitle.text__brand Tárhelyszolgáltató adatai     
+        p
+          span.text__bold Cégnév:</span> Rackhost Zrt.      
+        p
+          span.text__bold Székhely:</span> 6722 Szeged, Tisza Lajos körút 41.      
+        p
+          span.text__bold Adószám:</span> 25333572-2-06
+        p
+          span.text__bold Cégjegyzékszám:</span> 06-10-000489
+        p
+          span.text__bold E-mail:</span> info@rackhost.hu

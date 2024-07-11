@@ -1,15 +1,18 @@
 extends layout 
 
 include mixins/_head
+include mixins/_head-end
 
 block head 
   meta(name="description" content="Ismerj meg, Szénási Ágnesi vagyok, tapasztalt pszichológus. Tudd meg, mikor érdemes hozzám fordulnod.")
   title Szénási Ágnes | Hogyan segíthetek
   +head 
+  link(rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-profil.jpg" type="image/jpeg")
+  +headEnd
 block content
   main
     .img-background
-      img.img__fullwidth(src="/images/photos/wide-portrait-example.jpg", alt="Szénási Ágnes pszichológus")
+      img.img__fullwidth.crop-center(src="/images/photos/wide-profil.jpg", alt="Szénási Ágnes pszichológus")
     .section.article--wrapper
       article.article__detailed
         h2.title.title__center.text__brand.article__detailed--title Rólam

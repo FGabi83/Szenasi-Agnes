@@ -34,8 +34,8 @@ app.get('/adatvedelem', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'adatvedelem.html'));
 });
 
-app.get('/impresszium', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'dist', 'impresszium.html'));
+app.get('/impresszum', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'impresszum.html'));
 });
 
 

@@ -1,11 +1,13 @@
 extends layout 
 
 include mixins/_head
-
+include mixins/_head-end
 block head 
   meta(name="description" content="Személyre szabott pszichológiai tanácsadást nyújtok, hogy megtaláld lelki egyensúlyodat és javítsd életminőségedet.")
   title Szénási Ágnes | Pszichológiai tanácsadás
-  +head 
+  +head
+  link(rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-therapy-session.jpg" type="image/jpeg")
+  +headEnd 
 block content
   main
     .img-background

@@ -120,8 +120,8 @@ const config = {
       inject: false,
     }),
     new HtmlWebpackPlugin({
-      template: "./views/impresszium.pug",
-      filename: "impresszium.html", 
+      template: "./views/impresszum.pug",
+      filename: "impresszum.html", 
       inject: false,
     }),
   ],

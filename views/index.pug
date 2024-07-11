@@ -1,11 +1,14 @@
 extends layout 
 
 include mixins/_head
+include mixins/_head-end
 
 block head 
   meta(name="description" content="Szénási Ágnes vagyok, pszichológus 10 éves tapasztalattal. Pszichológiai tanácsadással és autogén tréninggel foglalkozom. Ismerd meg szolgáltatásaimat!")
   title Szénási Ágnes | Kezdőlap
   +head 
+  link(rel="preload" fetchpriority="high" as="image" href="/images/photos/Mobile_woman-relaxing.jpg" type="image/jpeg")
+  +headEnd
 block content
   main
     .hero--main
@@ -16,21 +19,21 @@ block content
         a.btn.btn__hero(href="/kapcsolat") Kérj Időpontot
         a.btn.btn__hero__hollow(href="/kapcsolat#konzultacio") Ingyenes Konzultáció
     .section 
-      article.article 
+      article.article.article__middle 
         h2.article--title.title.title__center Mi a pszichológiai tanácsadás?
-        img.article--img(src="/images/photos/psychologist-smiling.jpg", alt="Pszichológus mosolyogva beszélget")
+        img.article--img(src="/images/photos/flip-psychologist-smiling.jpg", alt="Pszichológus mosolyogva beszélget" loading="lazy")
         .article--content
           p A személyközpontú tanácsadás arra helyezi a hangsúlyt, hogy az egyén megismerje és elfogadja önmagát. Szakemberként szeretnék hozzájárulni egy magabiztos, önazonos énkép felfedezéséhez és megéléséhez, amelyből építkezve aztán a hozzám fordulók nem csak sikeresebben érhetik el az önmaguknak kitűzött célokat, de az oda vezető út során is boldogabbak, elégedettebbek lehetnek. 
           a.btn.btn__hollow(href="/tanacsadas") Részletek
-      article.article.article__middle 
+      article.article 
         h2.article--title.title.title__center Mi az autogén tréning?
-        img.article--img(src="/images/photos/meditating.jpg", alt="fiatal nő meditál")
+        img.article--img(src="/images/photos/flip-meditating.jpg", alt="fiatal nő meditál" loading="lazy")
         .article--content
           p Az autogén tréning egy tudományos alapokon nyugvó relaxációs módszer, ami az izmok ellazításán keresztül hat, szervezetünket nyugalmi állapotba hozza. A technika elsajátítása után te is képes leszel a mindennapokban gyakorolni, és tapasztalni fogod a rendszeres gyakorlás következtében jelentkező pozitív hatásokat.
           a.btn.btn__hollow(href="/autogen") Részletek
-      article.article.article__last
+      article.article.article__middle.article__last
         h2.article--title.title.title__center Mikor fordulj hozzám?
-        img.article--img(src="/images/photos/small-portrait-example.jpg", alt="Szénási Ágnes pszichológus")
+        img.article--img(src="/images/photos/small-profil.jpg", alt="Szénási Ágnes pszichológus" loading="lazy")
         .article--content
           p.align-left Kereshetsz engem, ha:
           ul.article--list 

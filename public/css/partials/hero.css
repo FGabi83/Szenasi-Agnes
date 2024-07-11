@@ -66,4 +66,7 @@ HERO SECTION
   .title__hero, .text__hero {
     text-align: left;
   }
+  .btn__hero__hollow {
+    border-color: var(--secondary-color);
+  }
 }

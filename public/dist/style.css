@@ -373,7 +373,7 @@
     --font-size-big:        calc(var(--font-size-regular) * 1.8);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
     --font-size-small:      0.875rem;
-    --line-height-small:    1rem;
+    --line-height-small:    1.1rem;
     --header-height:        clamp(3.5rem, 5vw + 2rem, 6rem);
     --hero-height:          calc(100dvh - var(--header-height));  
     --footer-height:        7.5rem; 
@@ -947,6 +947,8 @@ header {
       line-height:     1.5rem;
     }
 
+    
+
       .contact--icon {
         padding-right: .5rem;
         color:         var(--primary-color);
@@ -1006,10 +1008,12 @@ header {
  padding-left: 1.9rem;
   
 }
-
-
 }
-
+@media (min-width: 1024px) {
+  .contact--link:hover {
+    text-decoration: underline;
+  }
+}
 
 @media (min-width: 1500px) {
   .contacts--wrapper {
@@ -1098,6 +1102,9 @@ HERO SECTION
   .title__hero, .text__hero {
     text-align: left;
   }
+  .btn__hero__hollow {
+    border-color: var(--secondary-color);
+  }
 }
 
 /*!***************************************************************************************************************!*\
@@ -1116,6 +1123,7 @@ HERO SECTION
   justify-content: flex-start;
   align-items:     center;
   width:           min(55.1015625rem, 100%);
+  width:           min(58rem, 100%);
 } 
 
 .article__last {
@@ -1196,7 +1204,9 @@ HERO SECTION
     .crop-top {
       object-position: bottom;
     }
-
+    .crop-center {
+      object-position: 50% 85%;
+    }
     
   .article--wrapper {
     gap:              1rem;
@@ -1285,6 +1295,12 @@ HERO SECTION
   }
 }
 
+@media (min-width: 1200px) {
+  .article {
+    column-gap:    4rem;
+  }
+}
+
 
 
 
@@ -1308,6 +1324,95 @@ HERO SECTION
 
 
 
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/privacy.css ***!
+  \***************************************************************************************************************/
+.privacy--wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: min(600px, 90%);
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+}
+
+.privacy--wrapper h2 {
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-regular);
+}
+
+.last-p {
+  margin-bottom: 2rem;;
+}
+
+/*  LISTS  */
+
+.privacy--wrapper li {
+  list-style-position: inside;
+  display:             flex;
+  align-items:         flex-start;
+  
+}
+
+.privacy--wrapper ul {
+  padding-left: 0;
+}
+
+
+
+.privacy--wrapper ul li:before {
+  content:      "•"; 
+  margin-right: 0.5rem; /* A bullet point távolsága a szövegtől */
+  font-size:    1.5rem;
+}
+
+
+
+
+/* LINKS */
+
+.privacy--link {
+  color: var(--brand-color);
+}
+
+.privacy--link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .privacy--wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .privacy--wrapper h1 {
+    margin-bottom: 1rem;
+  }
+} 
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/impressum.css ***!
+  \*****************************************************************************************************************/
+.impressum--wrapper {
+  display:         flex;
+  flex-flow:       column nowrap;
+  justify-content: flex-start;
+  align-items:     flex-start;
+  max-width:       47rem;
+  padding-top:     2rem;
+  padding-bottom:  2rem;
+  
+}
+
+  .impressum--subwrapper {
+    margin-top:    2rem;
+    margin-bottom: 2rem;
+  }
+
+  .impressum--wrapper h2 {
+    margin-bottom: 1rem;
+  }
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/footer.css ***!
   \**************************************************************************************************************/
@@ -1337,11 +1442,13 @@ footer {
       text-align:      center;
       letter-spacing:  0.15rem;
       text-transform:  uppercase;
-      color:           var(--tertiary-color);
+      color:           var(--brand-color);
     }
 
     .footer--text__link {
-      color:           var(--brand-color);
+      color:           var(--secondary-color);
+      opacity:         .8;
+      
     }
 
     .footer--text__link:hover {
@@ -1353,7 +1460,7 @@ footer {
 /*!*************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/icons.css ***!
   \*************************************************************************************************************/
-/* Social media icons */
+/* Contact icons */
 
 .icons--wrapper {
     height:          2rem;
@@ -1371,7 +1478,7 @@ footer {
       width:            2rem;
       height:           2rem;
       background-color: var(--brand-color);
-      color:            var(--secondary-color);
+      color:            var(--primary-color);
       opacity:          .8;
       border-radius:    50%;
     }
@@ -1394,17 +1501,11 @@ footer {
         border:           .125rem solid var(--tertiary-color);
       }  
 
-/*!************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hide.css ***!
-  \************************************************************************************************************/
-.hide {
-  display: none;
-}
 /*!**************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./public/css/style.css ***!
   \**************************************************************************************************************************************************************************/
-/*@import 'partials/privacy.css';
-@import 'partials/impressium.css';*/
+
+
 
 
 

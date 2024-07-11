@@ -18,7 +18,7 @@
     --font-size-big:        calc(var(--font-size-regular) * 1.8);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
     --font-size-small:      0.875rem;
-    --line-height-small:    1rem;
+    --line-height-small:    1.1rem;
     --header-height:        clamp(3.5rem, 5vw + 2rem, 6rem);
     --hero-height:          calc(100dvh - var(--header-height));  
     --footer-height:        7.5rem; 

@@ -1,43 +1,67 @@
 extends layout 
 
 include mixins/_head
+include mixins/_head-end
 
 block head 
   title Szénási Ágnes | Adatvédelmi tájékoztató
   +head
+  +headEnd
 
 block content
-  main.main__vertical
-    h1.title.title__center.title__light Adatvédelmi tájékoztató
-    p.text__dark.text__50.text__bold Üdvözlünk a Bagoly Pubs weboldalán!
-    p.text__dark.text__50 Kérjük, figyelmesen olvasd el ezt az adatvédelmi tájékoztatót, hogy megértsd, hogyan kezeljük és védelmezzük az általad megadott személyes adatokat.
-    h2.subtitle.title__center.title__light Cégadatok
-    ul.text__dark.text__50.privacy--list
-      li Cégnév: Bagoly Pubs Kft. 
-      li Székhely: 1031. Budapest, Ányos utca 4. 
-      li Email: info@bagolypub.hu
-    h2.subtitle.title__center.title__light Személyes adatok gyűjtése és felhasználása
-    p.text__dark.text__50 Az általad megadott személyes adatokat kizárólag az alábbi célokra használjuk fel:
-    ul.text__dark.text__50.privacy--list
-      li 
-        span.text__bold Kapcsolattartás:</span> Ha kapcsolatba lépsz velünk az email címen vagy telefonon keresztül, az általad megadott adatokat csak az adott kommunikáció céljából használjuk fel.
-      li 
-        span.text__bold Asztalfoglalások kezelése:</span> Amennyiben asztalfoglalásra van szükséged, az általad megadott elérhetőségeket csak az asztalfoglalás lebonyolítására és visszaigazolására használjuk fel.
-    h2.subtitle.title__center.title__light Cookie-k használata
-    p.text__dark.text__50 A weboldalunkon cookie-kat használunk annak érdekében, hogy javítsuk a felhasználói élményt és nyomon kövessük a weboldalunk látogatottságát. A Google Analytics segítségével gyűjtött adatokat kizárólag a weboldal teljesítményének elemzésére használjuk fel. Ezek a cookie-k nem tartalmaznak személyes azonosító információkat, és nem alkalmasak arra, hogy azonosítsanak téged.
-    h2.subtitle.title__center.title__light Adatvédelem és biztonság
-    p.text__dark.text__50 Az általad megadott személyes adatokat biztonságosan tároljuk, és csak az arra jogosult személyek férhetnek hozzá. Nem osztjuk meg, áruljuk el vagy adjuk át az adatokat harmadik félnek, kivéve, ha azt törvény kötelezi.
-    h2.subtitle.title__center.title__light Harmadik fél weboldalai
-    p.text__dark.text__50 A weboldalunk lehetőséget biztosít harmadik fél weboldalaira mutató linkek elérésére. Az ilyen weboldalak adatvédelmi gyakorlatáért és tartalmáért nem vagyunk felelősek.
-    h2.subtitle.title__center.title__light Adatvédelmi jogaid
-    p.text__dark.text__50 Az adatvédelmi jogaidról és azok gyakorlásának módjáról részletes tájékoztatást kaphatsz az adatvédelmi törvényeknek megfelelően.
-    h2.subtitle.title__center.title__light Változtatások az adatvédelmi tájékoztatón
-    p.text__dark.text__50 Fenntartjuk a jogot, hogy időnként frissítsük vagy módosítsuk az adatvédelmi tájékoztatónkat. Az esetleges változtatásokról értesíteni fogunk, és frissített tájékoztatót teszünk elérhetővé a weboldalon.
-    h2.subtitle.title__center.title__light Kapcsolat
-    p.text__dark.text__50 Ha bármilyen kérdésed vagy észrevételed van az adatvédelmi tájékoztatóval kapcsolatban, kérjük, lépj kapcsolatba velünk az alábbi elérhetőségen:
-    .privacy--contacts__wrapper
-      p.text__dark.text__50.privacy--contacts.hide Telefon:  
-        a.privacy--link(href="tel:1234567890") (123) 456-7890
-      p.text__dark.text__50.privacy--contacts Email: 
-        a.privacy--link(href="mailto:info@bagolypub.hu") info@bagolypub.hu
+  main.section
+    .privacy--wrapper
+      h1.title.title__center Adatvédelmi tájékoztató
+      p.text__bold Kedves Látogató!
+      p.last-p Az adatvédelmi tájékoztató célja, hogy Szénási Ágnes EV. (a továbbiakban: Szolgáltató) weboldalának (a továbbiakban: Honlap) látogatóit tájékoztassa a Honlapon megadott személyes adatok kezeléséről, valamint a látogatók adatvédelmi jogairól és azok érvényesítési lehetőségeiről.
+      h2.title.text__brand 1. Az adatkezelő adatai
+      div.last-p
+        p <span class="text__bold">Név:</span> Szénási Ágnes EV. 
+        p <span class="text__bold">Székhely:</span> 1031 Budapest, Amfiteátrum utca 23.
+        p <span class="text__bold">Email:</span> agi.szenasi321@gmail.com 
+        p <span class="text__bold">Telefon:</span> +36 30 285 7034
+      h2.title.text__brand 2. Az adatkezelés célja és jogalapja
+      p Az adatkezelés célja a Honlap látogatóinak tájékoztatása, valamint a Szolgáltatóval való kapcsolatfelvétel biztosítása.
+      p.last-p A személyes adatok kezelésének jogalapja az érintettek önkéntes hozzájárulása, amelyet a látogatók a kapcsolatfelvétel során adnak meg.
+      h2.title.text__brand 3. Kezelt adatok köre
+      p A Honlap látogatása során a következő személyes adatok kerülhetnek kezelésre:
+      ul
+        li Honlap használatával kapcsolatos adatok (pl. IP-cím, látogatás időpontja, böngésző típusa) a Google Analytics és Google Ads szolgáltatásokon keresztül.
+      p Kapcsolatfelvétel során megadott adatok:
+      ul.last-p
+        li Név (amennyiben a látogató megadja)
+        li E-mail cím
+        li Telefonszám (amennyiben a látogató megadja)
+        li A kapcsolatfelvétel során küldött üzenet tartalma
+      h2.title.text__brand 4. Az adatok felhasználása
+      p.last-p A kapcsolatfelvétel során megadott személyes adatokat kizárólag a látogatóval való kommunikáció céljából használjuk fel, és csak annyi ideig tároljuk, ameddig az szükséges a kapcsolattartás lebonyolításához, illetve a jogszabályi kötelezettségek teljesítéséhez.
+      h2.title.text__brand 5. A sütik (cookie-k) használata
+      p.last-p A Honlap Google Analytics és Google Ads sütiket használ a látogatói élmény javítása, a weboldal forgalmának elemzése és hirdetések személyre szabása érdekében. A sütik használatához a látogatók előzetes hozzájárulása szükséges, amelyet a Honlap betöltődésekor megjelenő süti engedélyezési sávban adhatnak meg.
+      h2.title.text__brand 6. Az adatok megőrzésének időtartama
+      p.last-p A Google Analytics és Google Ads által gyűjtött adatokat a Google szolgáltatásaira vonatkozó adatvédelmi szabályzatokban meghatározott ideig őrizzük meg. A kapcsolatfelvétel során megadott adatokat a kommunikáció lezárultát követően legfeljebb 1 évig őrizzük meg, kivéve, ha jogszabály hosszabb megőrzési időt ír elő.
+      h2.title.text__brand 7. Az érintettek jogai
+      p Az érintettek jogosultak:
+      ul
+        li Tájékoztatást kérni az adatkezelésről
+        li Hozzáférni a kezelt adatokhoz
+        li Helyesbíteni a pontatlan személyes adatokat
+        li Törölni a személyes adatokat (az „elfeledtetéshez való jog”)
+        li Korlátozni az adatkezelést
+        li Tiltakozni az adatkezelés ellen
+        li Adathordozhatósághoz való jogukat gyakorolni
+      p.last-p Az érintettek jogorvoslati lehetőséggel élhetnek a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH).
+      h2.title.text__brand 8. Adatbiztonság
+      p A Szolgáltató megfelelő technikai és szervezési intézkedésekkel védi a személyes adatokat az illetéktelen hozzáférés, a megváltoztatás, a nyilvánosságra hozatal vagy a törlés ellen. Ezek az intézkedések a következőket tartalmazzák:
+      ul.last-p
+        li A weboldal HTTPS titkosítást használ az adatátvitel védelme érdekében.
+        li A kapcsolatfelvétel során megadott személyes adatokhoz való hozzáférés jelszóval védett és csak a Szolgáltató számára elérhető.
+        li Az email kommunikáció biztonságos, jelszóval védett email fiókon keresztül történik.
+      h2.title.text__brand 9. Kapcsolatfelvétel
+      p Amennyiben kérdése vagy észrevétele van az adatkezeléssel kapcsolatban, kérjük, lépjen kapcsolatba velünk az alábbi elérhetőségek egyikén:
+      div
+        p Email: 
+          a.privacy--link(href="mailto:agi.szenasi321@gmail.com") agi.szenasi321@gmail.com
+        p Telefon:  
+          a.privacy--link(href="tel:36302857034") +36 30 285 7034
+      p Ez az Adatvédelmi tájékoztató a Honlap működésének részét képezi, és annak változásairól a látogatók a Honlapon keresztül értesülhetnek.
       
