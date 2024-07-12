@@ -49,6 +49,7 @@
 
     .btn__hero:hover {
       background:   transparent;
+      border-color: var(--secondary-color);
       color:        var(--secondary-color);
     }
 

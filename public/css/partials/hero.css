@@ -36,7 +36,11 @@ HERO SECTION
   
 
 /*Hero background and layout for bigger screens*/
-
+@media (min-width: 471px) {
+  .hero--main {
+    background:  url('/images/photos/Tablet_woman-relaxing.jpg') no-repeat center / cover;
+  }
+}
 @media (max-height: 539px) {
   .hero--main {
     padding-top: 6vh;
