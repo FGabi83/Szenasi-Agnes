@@ -7,11 +7,12 @@ block head
   meta(name="description" content="Ismerj meg, Szénási Ágnesi vagyok, tapasztalt pszichológus. Tudd meg, mikor érdemes hozzám fordulnod.")
   title Szénási Ágnes | Hogyan segíthetek
   +head 
-  link(rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-profil.jpg" type="image/jpeg")
+  link(rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-profil.webp" type="image/webp")
   +headEnd
 block content
   main
-    .img-background
+    picture.img-background 
+      source(srcset="/images/photos/wide-profil.webp", type="image/webp")
       img.img__fullwidth.crop-center(src="/images/photos/wide-profil.jpg", alt="Szénási Ágnes pszichológus")
     .section.article--wrapper
       article.article__detailed

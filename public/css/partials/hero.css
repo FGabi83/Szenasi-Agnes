@@ -12,6 +12,7 @@ HERO SECTION
 
 .hero--main {
   background:  url('/images/photos/Mobile_woman-relaxing.jpg') no-repeat center / cover;
+  background:  url('/images/photos/Mobile_woman-relaxing.webp') no-repeat center / cover;
   min-height:         var(--hero-height);
   width:              100%;
   

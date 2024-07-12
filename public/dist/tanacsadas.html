@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/dist/style.css">
-    <link rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-therapy-session.jpg" type="image/jpeg">
+    <link rel="preload" fetchpriority="high" as="image" href="/images/photos/wide-therapy-session.webp" type="image/webp">
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&amp;family=Montserrat:wght@100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
   </head>
@@ -42,7 +42,9 @@
         <div class="js-nav--menu"> <i class="fa fa-bars"></i></div>
       </header>
       <main>
-        <div class="img-background"><img class="img__fullwidth" src="/images/photos/wide-therapy-session.jpg" alt="Pszichológiai tanácsadás"></div>
+        <picture class="img-background"> 
+          <source srcset="/images/photos/wide-therapy-session.webp" type="image/webp"><img class="img__fullwidth" src="/images/photos/wide-therapy-session.jpg" alt="Pszichológiai tanácsadás">
+        </picture>
         <div class="section article--wrapper">
           <article class="article__detailed">
             <h2 class="title title__center text__brand article__detailed--title">Mi a Pszichológiai tanácsadás célja?</h2>
