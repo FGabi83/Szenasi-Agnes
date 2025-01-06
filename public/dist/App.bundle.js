@@ -42,9 +42,16 @@ __webpack_require__.r(__webpack_exports__);
 function dropdownMenu() {
   var navMenu = document.querySelector(".js-nav--menu");
   var navWrapper = document.querySelector(".js-nav--wrapper");
+  var navLinks = document.querySelectorAll(".js-nav--item");
   navMenu.addEventListener("click", function () {
     navWrapper.classList.toggle("js-is-open");
     navMenu.classList.toggle("js-highlight");
+  });
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navWrapper.classList.remove("js-is-open");
+      navMenu.classList.remove("js-highlight");
+    });
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = (dropdownMenu);

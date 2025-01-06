@@ -110,7 +110,7 @@
       align-items:     center;
       width:           min(45rem,100%);
       gap:             1rem;
-      margin-top:      2rem;
+      margin-top:      1rem;
       margin-bottom:   2rem;
     }
  
@@ -195,8 +195,12 @@
 /*--------------------------------*/
 /* TABLET AND DESKTOP FOR SUBPAGES */
 /*--------------------------------*/
-
-
+@media (min-width: 400px) {
+  .article__detailed {
+    margin-top: 2rem;
+  }
+}
+  
 @media (min-width: 768px) {
  .article__detailed--title {
   margin-bottom: 1rem;
